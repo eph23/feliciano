@@ -1,0 +1,570 @@
+/*! HTML5 Boilerplate v7.2.0 | MIT License | https://html5boilerplate.com/ */
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:300,400,500,500i,600,700,700i,800,900&display=swap");
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.65; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers
+ */
+.hidden {
+  display: none !important; }
+
+/*
+* Hide only visually, but have it available for screen readers:
+* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+*
+* 1. For long content, line feeds are not interpreted as spaces and small width
+*    causes content to wrap 1 word per line:
+*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+*/
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  /* 1 */ }
+
+/*
+* Extends the .sr-only class to allow the element
+* to be focusable when navigated to via the keyboard:
+* https://www.drupal.org/node/897638
+*/
+.sr-only.focusable:active,
+.sr-only.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  white-space: inherit;
+  width: auto; }
+
+/*
+* Hide visually and from screen readers, but maintain layout
+*/
+.invisible {
+  visibility: hidden; }
+
+/*
+* Clearfix: contain floats
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    `contenteditable` attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that receive the `clearfix` class.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+@media print, (-webkit-min-device-pixel-ratio: 1.25), (-o-min-device-pixel-ratio: 5/4), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster */
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre {
+    white-space: pre-wrap !important; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+/*
+Extra small devices (portrait phones, less than 576px) ==> xs
+Small devices (landscape phones, less than 768px) ==> sm
+Medium devices (tablets, less than 992px) ==> md
+Large devices (desktops, less than 1200px) ==> lg
+Extra large devices (large desktops, more then 1200px) ==> xl
+*/
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media (max-width: 47.99875em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 61.99875em) {
+    html {
+      font-size: 56.25%; } }
+
+body {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.heading__cursive {
+  font-size: 10rem;
+  font-family: 'Great Vibes', cursive;
+  color: #c8a97e; }
+
+.heading__primary {
+  font-size: 8rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; }
+  .heading__primary--bold {
+    font-weight: 900; }
+
+.heading__secondary {
+  font-size: 5rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; }
+  .heading__secondary--bold {
+    font-weight: 900; }
+
+.heading__tertiary {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #c8a97e;
+  font-family: 'Poppins', sans-serif; }
+
+.heading-body__primary {
+  font-size: 2.4rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; }
+
+.heading-body__secondary {
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; }
+  .heading-body__secondary--golden {
+    color: #c8a97e; }
+
+.heading-body__tertiary {
+  font-size: 1.8rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif; }
+
+.paragraph {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2;
+  font-family: 'Poppins', sans-serif; }
+
+.button {
+  font-family: 'Poppins', sans-serif; }
+  .button:link {
+    text-decoration: none; }
+
+.button--menu {
+  font-size: 1.6rem;
+  color: #fff;
+  background: #c8a97e;
+  padding: .8em 1.5em;
+  border: 1px solid #c8a97e;
+  -webkit-transition: all ease .5s;
+  -o-transition: all ease .5s;
+  transition: all ease .5s; }
+  .button--menu:hover {
+    color: #c8a97e;
+    background: #fff; }
+
+.button__text {
+  padding: 0;
+  color: #000; }
+  .button__text:hover {
+    color: #000; }
+  .button__text--primary {
+    font-size: 1.6rem; }
+  .button__text--secondary {
+    font-size: 1.4rem; }
+
+.hero-carousel__slide-img {
+  height: 100vh;
+  width: 100%; }
+  .hero-carousel__slide-img--1 {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.501838)), to(rgba(0, 0, 0, 0.501838))), url(/assets/img/bg_1.jpg);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_1.jpg);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_1.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_1.jpg);
+    background-position: center;
+    background-size: cover; }
+  .hero-carousel__slide-img--2 {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.501838)), to(rgba(0, 0, 0, 0.501838))), url(/assets/img/bg_2.jpg);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_2.jpg);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_2.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_2.jpg);
+    background-position: center;
+    background-size: cover; }
+  .hero-carousel__slide-img--3 {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.501838)), to(rgba(0, 0, 0, 0.501838))), url(/assets/img/bg_3.jpg);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_3.jpg);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_3.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_3.jpg);
+    background-position: center;
+    background-size: cover; }
+  .hero-carousel__slide-img--4 {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.501838)), to(rgba(0, 0, 0, 0.501838))), url(/assets/img/bg_4.jpg);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_4.jpg);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_4.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_4.jpg);
+    background-position: center;
+    background-size: cover; }
+  .hero-carousel__slide-img--5 {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.501838)), to(rgba(0, 0, 0, 0.501838))), url(/assets/img/bg_5.jpg);
+    background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_5.jpg);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_5.jpg);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.501838) 0%, rgba(0, 0, 0, 0.501838) 100%), url(/assets/img/bg_5.jpg);
+    background-position: center;
+    background-size: cover; }
+
+.hero-carousel__text-box {
+  position: absolute;
+  width: 80%;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff; }
+
+.hero {
+  position: relative; }
+  .hero__container {
+    overflow: hidden; }
+  .hero-menu {
+    position: absolute;
+    width: 100%;
+    bottom: 5rem;
+    z-index: 1000;
+    color: #fff; }
+    @media (max-width: 61.99875em) {
+      .hero-menu {
+        padding: 5rem 0;
+        position: relative;
+        bottom: 0rem;
+        color: #000; } }
+    .hero-menu__card {
+      z-index: 100000; }
+      .hero-menu__card-img {
+        height: 10rem;
+        width: 10rem;
+        border-radius: 50%;
+        position: relative;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%); }
+        .hero-menu__card-img--1 {
+          background: url(/assets/img/breakfast-1.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        .hero-menu__card-img--2 {
+          background: url(/assets/img/breakfast-2.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        .hero-menu__card-img--3 {
+          background: url(/assets/img/breakfast-3.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+        .hero-menu__card-img--4 {
+          background: url(/assets/img/breakfast-4.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat; }
+      .hero-menu__card-text {
+        padding: 2rem 0; }
+
+.about {
+  margin-top: 10rem; }
+  .about__img-box {
+    height: 90vh;
+    margin: 1rem; }
+    @media (max-width: 47.99875em) {
+      .about__img-box {
+        margin: 0; } }
+    .about__img-box--1 {
+      background: url(/assets/img/about.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      top: -5%; }
+      @media (max-width: 61.99875em) {
+        .about__img-box--1 {
+          position: relative;
+          top: 0; } }
+    .about__img-box--2 {
+      background: url(/assets/img/about-1.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover; }
+  .about__text-box {
+    padding-left: 2rem; }
+  .about__text-body {
+    margin-top: -8rem; }
+  .about__counter {
+    margin-top: 5rem; }
+
+.services {
+  padding: 5rem 0; }
+  .services-card {
+    padding: 1rem; }
+    .services-card__icon-box {
+      padding: 1rem;
+      padding-bottom: 3rem; }
+    .services-card__icon {
+      width: 7rem;
+      height: auto; }
+
+.menu {
+  padding: 5rem 0; }
+  .menu-card__img-box {
+    height: 23rem; }
+    .menu-card__img-box--1 {
+      background: url(/assets/img/breakfast-1.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .menu-card__img-box--2 {
+      background: url(/assets/img/breakfast-2.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .menu-card__img-box--3 {
+      background: url(/assets/img/breakfast-3.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .menu-card__img-box--4 {
+      background: url(/assets/img/breakfast-4.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .menu-card__img-box--5 {
+      background: url(/assets/img/breakfast-5.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .menu-card__img-box--6 {
+      background: url(/assets/img/breakfast-6.jpg);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .menu-card__text-box {
+    height: 100%;
+    padding: 2rem;
+    border: 1px solid #e4dfdf; }
+  .menu-card__button-box {
+    padding: 1rem 0; }
+
+.chefs {
+  padding: 5rem 0; }
+  .chefs-card__img-box {
+    border-radius: 1rem;
+    width: 100%;
+    height: 32rem; }
+    .chefs-card__img-box--1 {
+      background: url(/assets/img/chef-4.jpg);
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .chefs-card__img-box--2 {
+      background: url(/assets/img/chef-2.jpg);
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .chefs-card__img-box--3 {
+      background: url(/assets/img/chef-3.jpg);
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .chefs-card__img-box--4 {
+      background: url(/assets/img/chef-1.jpg);
+      background-position: top center;
+      background-size: cover;
+      background-repeat: no-repeat; }
+  .chefs-card__social-box {
+    padding: 1rem 4rem; }
+  .chefs-card__social {
+    width: 2rem;
+    height: auto; }
+
+.blog {
+  padding: 5rem 0; }
+  .blog-card {
+    padding: 2rem 0; }
+    .blog-card__image-box {
+      width: 100%;
+      height: 30rem; }
+      .blog-card__image-box--1 {
+        background: url(/assets/img/image_1.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      .blog-card__image-box--2 {
+        background: url(/assets/img/image_2.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+      .blog-card__image-box--3 {
+        background: url(/assets/img/image_3.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat; }
+    .blog-card__text-box {
+      padding: 2rem; }
+    .blog-card__button-box {
+      padding: 1rem 0; }
+    .blog-card__button-icon {
+      width: 2rem; }
+
+.section__header {
+  padding: 2rem 0; }
+  .section__header-heading {
+    position: relative;
+    top: -7rem; }

@@ -1,0 +1,51 @@
+.hero-carousel {
+
+  &__slide-img {
+    height: 100vh;
+    width: 100%;
+
+    &--1 {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5018382352941176) 0%, rgba(0, 0, 0, 0.5018382352941176) 100%),
+        url(/assets/img/bg_1.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--2 {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5018382352941176) 0%, rgba(0, 0, 0, 0.5018382352941176) 100%),
+        url(/assets/img/bg_2.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--3 {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5018382352941176) 0%, rgba(0, 0, 0, 0.5018382352941176) 100%),
+        url(/assets/img/bg_3.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--4 {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5018382352941176) 0%, rgba(0, 0, 0, 0.5018382352941176) 100%),
+        url(/assets/img/bg_4.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &--5 {
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.5018382352941176) 0%, rgba(0, 0, 0, 0.5018382352941176) 100%),
+        url(/assets/img/bg_5.jpg);
+      background-position: center;
+      background-size: cover;
+    }
+  }
+
+  &__text-box {
+    position: absolute;
+    width: 80%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+  }
+}
