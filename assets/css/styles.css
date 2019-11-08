@@ -255,6 +255,12 @@ body {
   font-family: 'Poppins', sans-serif; }
   .heading__primary--bold {
     font-weight: 900; }
+  @media (max-width: 61.99875em) {
+    .heading__primary {
+      font-size: 5rem; } }
+  @media (max-width: 47.99875em) {
+    .heading__primary {
+      font-size: 4rem; } }
 
 .heading__secondary {
   font-size: 5rem;
@@ -262,12 +268,18 @@ body {
   font-family: 'Poppins', sans-serif; }
   .heading__secondary--bold {
     font-weight: 900; }
+  @media (max-width: 47.99875em) {
+    .heading__secondary {
+      font-size: 4rem; } }
 
 .heading__tertiary {
   font-size: 4rem;
   font-weight: 700;
   color: #c8a97e;
   font-family: 'Poppins', sans-serif; }
+  @media (max-width: 61.99875em) {
+    .heading__tertiary {
+      font-size: 3rem; } }
 
 .heading-body__primary {
   font-size: 2.4rem;

@@ -22,6 +22,16 @@
   &--bold {
     font-weight: 900;
   }
+
+  @include media-breakpoint (md) {
+    font-size: 5rem;
+  }
+
+  @include media-breakpoint (sm) {
+    font-size: 4rem;
+  }
+
+
 }
 
 .heading__secondary {
@@ -33,6 +43,10 @@
   &--bold {
     font-weight: 900;
   }
+
+  @include media-breakpoint (sm) {
+    font-size: 4rem;
+  }
 }
 
 .heading__tertiary {
@@ -41,6 +55,10 @@
   color: $color__primary;
   font-family: 'Poppins',
     sans-serif;
+
+  @include media-breakpoint (md) {
+    font-size: 3rem;
+  }
 }
 
 .heading-body__primary {
