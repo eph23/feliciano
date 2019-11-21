@@ -6,6 +6,7 @@ $('.hero-carousel').owlCarousel({
   margin: 0,
   nav: false,
   touchDrag: true,
+  mouseDrag: false,
   responsive: {
     0: {
       items: 1
