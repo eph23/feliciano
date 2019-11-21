@@ -5,11 +5,11 @@
   }
 
   @include media-breakpoint (sm) {
-    height: 85vh;
+    height: 100vh;
   }
 
   @include media-breakpoint (xs) {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
   }
 
