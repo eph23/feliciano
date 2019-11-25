@@ -1,0 +1,58 @@
+.chefs {
+    padding: 5rem 0;
+
+    &-card {
+        padding: 2rem 0;
+
+        &__img-box {
+            border-radius: 1rem;
+            width: 100%;
+            height: 32rem;
+
+            @include media-breakpoint-down (sm) {
+                height: 40rem;
+            }
+
+            @include media-breakpoint-down (xs) {
+                height: 32rem;
+            }
+
+            &--1 {
+                background: url(../img/chef-4.jpg);
+                background-position: top center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &--2 {
+                background: url(../img/chef-2.jpg);
+                background-position: top center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &--3 {
+                background: url(../img/chef-3.jpg);
+                background-position: top center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            &--4 {
+                background: url(../img/chef-1.jpg);
+                background-position: top center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &__social-box {
+            padding: 1rem 4rem;
+        }
+
+        &__social {
+            width: 2rem;
+            height: auto;
+        }
+    }
+}

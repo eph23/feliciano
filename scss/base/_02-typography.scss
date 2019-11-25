@@ -13,23 +13,27 @@ $color__primary: #c8a97e;
   color: $color__primary;
 }
 
+
 .heading__primary {
   font-size: 8rem;
   font-weight: 600;
   font-family: 'Poppins',
     sans-serif;
 
+  // @include media-breakpoint-down (md) {
+  //   font-size: 5rem;
+  // }
+
+  @include media-breakpoint-down (md) {
+    font-size: 3rem;
+  }
+
+
   &--bold {
     font-weight: 900;
   }
 
-  @include media-breakpoint-down (md) {
-    font-size: 5rem;
-  }
 
-  @include media-breakpoint-down (sm) {
-    font-size: 4rem;
-  }
 }
 
 .heading__secondary {
@@ -43,7 +47,7 @@ $color__primary: #c8a97e;
   }
 
   @include media-breakpoint-down (sm) {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
 }
 
@@ -93,4 +97,6 @@ $color__primary: #c8a97e;
   line-height: 2;
   font-family: 'Poppins',
     sans-serif;
+
+ 
 }
